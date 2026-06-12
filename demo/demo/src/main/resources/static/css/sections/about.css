@@ -1,0 +1,112 @@
+.about-section {
+    background: #f4f8fc;
+    color: #06152a;
+    padding: 96px 0;
+}
+
+.about-container {
+    width: 88%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1.08fr;
+
+    gap: 72px;
+    align-items: start;
+}
+
+.section-label {
+    display: inline-block;
+    color: #082b7d;
+    font-size: .82rem;
+    font-weight: 800;
+    letter-spacing: .14em;
+    margin-bottom: 22px;
+}
+
+.about-left h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: clamp(2.4rem,4.6vw,4.2rem);
+    line-height: 1.07;
+    letter-spacing: -.055em;
+    font-weight: 800;
+    margin-bottom: 28px;
+}
+
+.about-left p {
+    color: #43536b;
+    font-size: 1.12rem;
+    line-height: 1.7;
+    margin-bottom: 34px;
+}
+
+.about-list {
+    list-style: none;
+    display: grid;
+    gap: 16px;
+}
+
+.about-list li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.about-list li::before {
+    content: "✓";
+
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+    border: 2px solid var(--cyan);
+
+    color: var(--cyan);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: .7rem;
+    font-weight: 800;
+}
+
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 26px;
+}
+
+.about-card {
+    background: white;
+    border: 1px solid #dbe5ef;
+    border-radius: 22px;
+    padding: 34px 30px;
+    min-height: 245px;
+}
+
+.card-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 14px;
+
+    background: #e8eef5;
+    color: #082b7d;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 22px;
+}
+
+.about-card h3 {
+    margin-bottom: 14px;
+}
+
+.about-card p {
+    color: #43536b;
+    line-height: 1.65;
+}

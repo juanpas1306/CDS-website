@@ -1,0 +1,11 @@
+:root {
+    --cyan: #10c5df;
+    --cyan-light: #7aeef7;
+    --cyan-dark: #0cafc7;
+    --bg-deep: #04122f;
+    --bg-mid: #061b4f;
+    --bg-accent: #08246a;
+    --text-muted: rgba(255,255,255,0.62);
+    --border-subtle: rgba(255,255,255,0.08);
+    --border-cyan: rgba(16,197,223,0.35);
+}

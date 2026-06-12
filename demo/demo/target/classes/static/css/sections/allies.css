@@ -1,0 +1,172 @@
+.allies-section {
+    background: #f4f8fc;
+    color: #071426;
+    padding: 92px 0 105px;
+    overflow: hidden;
+}
+
+.allies-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.allies-topline {
+    width: 88%;
+    max-width: 1400px;
+    margin: 0 auto 70px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 18px;
+}
+
+.allies-topline span {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #cbd9e8, transparent);
+}
+
+.allies-pill {
+    border: 1px solid #cbd9e8;
+    background: rgba(255,255,255,0.76);
+    color: #082b7d;
+    padding: 10px 24px;
+    border-radius: 999px;
+    font-weight: 800;
+    font-size: 0.82rem;
+    letter-spacing: 0.02em;
+    box-shadow: 0 12px 30px rgba(7,20,38,0.04);
+}
+
+.allies-header {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 60px;
+    padding: 0 24px;
+}
+
+.allies-header h2 {
+    font-family: 'Sora', 'Inter', sans-serif;
+    font-size: clamp(2.3rem, 4vw, 3.4rem);
+    line-height: 1.05;
+    letter-spacing: -0.055em;
+    font-weight: 800;
+    color: #071426;
+    margin-bottom: 16px;
+}
+
+.allies-header p {
+    color: #43536b;
+    font-size: 1.04rem;
+    line-height: 1.7;
+}
+
+.allies-marquee {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 8px 0 18px;
+}
+
+.allies-marquee::before,
+.allies-marquee::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 180px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.allies-marquee::before {
+    left: 0;
+    background: linear-gradient(90deg, #f4f8fc, transparent);
+}
+
+.allies-marquee::after {
+    right: 0;
+    background: linear-gradient(270deg, #f4f8fc, transparent);
+}
+
+.allies-track {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: max-content;
+    animation: alliesScroll 32s linear infinite;
+}
+
+.allies-marquee:hover .allies-track {
+    animation-play-state: paused;
+}
+
+.ally-card {
+    width: 230px;
+    min-height: 86px;
+    border-radius: 22px;
+    background: rgba(255,255,255,0.92);
+    border: 1px solid #dbe5ef;
+    box-shadow: 0 18px 38px rgba(7,20,38,0.06);
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-shrink: 0;
+    transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.ally-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(16,197,223,0.45);
+    box-shadow: 0 26px 52px rgba(7,20,38,0.11);
+}
+
+.ally-card img {
+    width: 58px;
+    height: 58px;
+    border-radius: 16px;
+    object-fit: contain;
+    background: #eef5fb;
+    padding: 9px;
+    flex-shrink: 0;
+}
+
+.ally-card strong {
+    display: block;
+    color: #071426;
+    font-size: 1rem;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.ally-card span {
+    display: block;
+    color: #607086;
+    font-size: 0.82rem;
+    margin-top: 4px;
+}
+
+@keyframes alliesScroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-50% - 12px));
+    }
+}
+
+@media (max-width: 760px) {
+    .allies-section {
+        padding: 76px 0 88px;
+    }
+
+    .ally-card {
+        width: 205px;
+    }
+
+    .allies-marquee::before,
+    .allies-marquee::after {
+        width: 72px;
+    }
+}

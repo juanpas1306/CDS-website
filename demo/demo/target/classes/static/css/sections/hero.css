@@ -1,0 +1,308 @@
+/* ============================================
+   HERO PREMIUM - ARMONIZADO CON NAVBAR #082b7d
+   Para CDS Seguros
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero-premium {
+    position: relative;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #06122f 0%, #0a1a3a 50%, #0c1f45 100%);
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 50%, rgba(8,43,125,0.15) 0%, rgba(6,18,47,0.7) 100%);
+    z-index: 1;
+}
+
+.hero-bg-image {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 55%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-bg-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.85) saturate(0.9);
+}
+
+.hero-bg-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, 
+        #06122f 0%, 
+        rgba(8,43,125,0.5) 35%, 
+        transparent 100%);
+}
+
+.hero-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 4%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(8,43,125,0.35);
+    backdrop-filter: blur(12px);
+    padding: 10px 22px;
+    border-radius: 60px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    color: #8bb4ff;
+    border: 1px solid rgba(139,180,255,0.3);
+    margin-bottom: 35px;
+}
+
+.hero-badge i {
+    font-size: 1rem;
+    color: #8bb4ff;
+}
+
+.hero-content h1 {
+    font-family: 'Sora', 'Inter', sans-serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: white;
+    margin-bottom: 28px;
+    letter-spacing: -0.02em;
+}
+
+.hero-accent {
+    background: linear-gradient(135deg, #ffffff, #8bb4ff, #5c9eff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.6;
+    margin-bottom: 35px;
+    max-width: 520px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #1a5cff, #0a3ebf);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 60px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(26,92,255,0.35);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(26,92,255,0.5);
+    background: linear-gradient(135deg, #2a6cff, #1a4ecf);
+}
+
+.btn-secondary {
+    background: rgba(8,43,125,0.35);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 14px 32px;
+    border-radius: 60px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1px solid rgba(139,180,255,0.35);
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: rgba(8,43,125,0.55);
+    transform: translateY(-3px);
+    border-color: rgba(139,180,255,0.6);
+}
+
+.btn-soft {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(8,43,125,0.25);
+    backdrop-filter: blur(8px);
+    padding: 11px 28px;
+    border-radius: 60px;
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid rgba(139,180,255,0.25);
+    transition: all 0.3s ease;
+    margin-top: 5px;
+}
+
+.btn-soft:hover {
+    background: rgba(8,43,125,0.45);
+    border-color: rgba(139,180,255,0.5);
+    transform: translateY(-2px);
+}
+
+.btn-soft i {
+    color: #8bb4ff;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 55px;
+    margin-top: 55px;
+    flex-wrap: wrap;
+}
+
+.hero-stats div {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-stats strong {
+    font-family: 'Sora', sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #ffffff, #8bb4ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    line-height: 1.2;
+}
+
+.hero-stats span {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+/* Estrellas decorativas (toque premium) */
+.hero-premium::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(2px 2px at 15% 30%, rgba(255,255,255,0.4) 1%, transparent 1%),
+        radial-gradient(1px 1px at 65% 80%, rgba(255,255,255,0.3) 1%, transparent 1%),
+        radial-gradient(1.5px 1.5px at 85% 15%, rgba(255,255,255,0.35) 1.5%, transparent 1.5%),
+        radial-gradient(1px 1px at 35% 70%, rgba(255,255,255,0.25) 1%, transparent 1%),
+        radial-gradient(2px 2px at 75% 45%, rgba(255,255,255,0.3) 1%, transparent 1%);
+    background-size: 250px 250px;
+    background-repeat: repeat;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.4;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero-bg-image {
+        width: 100%;
+        opacity: 0.2;
+    }
+    
+    .hero-bg-image::after {
+        background: linear-gradient(90deg, #06122f 0%, #06122f 100%);
+    }
+    
+    .hero-content {
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .hero-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .btn-soft {
+        justify-content: center;
+        width: 100%;
+        max-width: 280px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .hero-stats {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 620px) {
+    .hero-container {
+        padding: 0 5%;
+    }
+    
+    .hero-badge {
+        font-size: 0.7rem;
+        padding: 7px 16px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        justify-content: center;
+        padding: 12px 24px;
+    }
+    
+    .hero-stats {
+        gap: 30px;
+    }
+    
+    .hero-stats strong {
+        font-size: 1.6rem;
+    }
+}
